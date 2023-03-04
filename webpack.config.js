@@ -1,6 +1,8 @@
+const path = require("path");
+const configFile = path.join(__dirname, `tsconfig.client.json`);
 module.exports = {
   mode: process.env.NODE_ENV == "production" ? "production" : "development",
-  entry: { main: "./src/main.tsx", sub: "./src/sub.tsx" },
+  entry: { main: "./client/main.tsx", sub: "./client/sub.tsx" },
   output: {
     path: `${__dirname}/dist/public`,
     filename: "[name].js",
@@ -9,7 +11,12 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        use: {
+          loader: "ts-loader",
+          options: {
+            configFile: configFile,
+          },
+        },
       },
     ],
   },
