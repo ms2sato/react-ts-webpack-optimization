@@ -1,12 +1,6 @@
 import * as React from "react";
-import { hydrateRoot } from "react-dom/client";
-import { Routing } from "./common";
+import { boot } from "./common";
 
-console.log('sub entry')
+console.log("sub entry");
 
-const container = document.getElementById("app");
-if (!container) {
-  throw new Error("container not found");
-}
-
-hydrateRoot(container, <Routing></Routing>);
+boot();
