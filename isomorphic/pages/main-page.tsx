@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function Page() {
   return (
     <>
-      <h1>これはmainです</h1>
+      <h1>This is Main</h1>
       <ul>
         <li>
           <a href="/sub">sub Anchor</a>

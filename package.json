@@ -9,11 +9,20 @@
     "clean": "rimraf dist"
   },
   "watch": {
-    "build": {
+    "build:client": {
       "patterns": [
         "client",
-        "server"
+        "isomorphic"
       ],
+      "runOnChangeOnly": true,
+      "extensions": "ts,tsx,html,js,json"
+    },
+    "build:server": {
+      "patterns": [
+        "server",
+        "isomorphic"
+      ],
+      "runOnChangeOnly": true,
       "extensions": "ts,tsx,html,js,json"
     }
   },

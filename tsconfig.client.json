@@ -8,6 +8,6 @@
     "moduleResolution": "node",
     "lib": ["dom", "dom.iterable", "es2020"]
   },
-  "include": ["client/**/*"],
+  "include": ["client/**/*", "isomorphic/**/*"],
   "exclude": ["dist", "node_modules"]
 }
