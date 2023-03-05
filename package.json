@@ -12,8 +12,7 @@
     "build": {
       "patterns": [
         "client",
-        "server",
-        "public"
+        "server"
       ],
       "extensions": "ts,tsx,html,js,json"
     }
