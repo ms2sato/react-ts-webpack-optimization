@@ -11,6 +11,6 @@
     "resolveJsonModule": true,
     "jsx": "react-jsx"
   },
-  "include": ["server/**/*"],
+  "include": ["server/**/*", "client/**/*"],
   "exclude": ["dist", "node_modules"]
 }

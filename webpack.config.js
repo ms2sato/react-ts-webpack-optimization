@@ -2,7 +2,10 @@ const path = require("path");
 const configFile = path.join(__dirname, `tsconfig.client.json`);
 module.exports = {
   mode: process.env.NODE_ENV == "production" ? "production" : "development",
-  entry: { main: "./client/main.tsx", sub: "./client/sub.tsx" },
+  entry: {
+    main: "./client/main.tsx",
+    sub: "./client/sub.tsx",
+  },
   output: {
     path: `${__dirname}/dist/public`,
     filename: "[name].js",

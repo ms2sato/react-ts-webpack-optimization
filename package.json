@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "build": "webpack && tsc",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "webpack",
+    "build:server": "tsc",
     "watch": "npm-watch",
     "dev": "concurrently --raw \"npm run dev:server\" \"npm run build && npm run watch\"",
     "dev:server": "node dist/server/app.js",

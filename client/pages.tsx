@@ -1,34 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import * as React from "react";
+const files = ["main-page", "sub-page"];
+const LazyMainPage = React.lazy(() =>
+  import(/*webpackChunkName: "[request]" */ `./pages/${files[0]}`).then(
+    ({ Page }) => ({
+      default: Page,
+    })
+  )
+);
+const LazySubPage = React.lazy(() =>
+  import(/*webpackChunkName: "[request]" */ `./pages/${files[1]}`).then(
+    ({ Page }) => ({
+      default: Page,
+    })
+  )
+);
 
 export function MainPage() {
   return (
-    <>
-      <h1>これはmainです</h1>
-      <ul>
-        <li>
-          <a href="/sub">sub Anchor</a>
-        </li>
-        <li>
-          <Link to="/sub">sub Link</Link>
-        </li>
-      </ul>
-    </>
+    <React.Suspense fallback="loading…">
+      <LazyMainPage></LazyMainPage>
+    </React.Suspense>
   );
 }
 
 export function SubPage() {
   return (
-    <>
-      <h1>これはsubです</h1>
-      <ul>
-        <li>
-          <a href="/main">main Anchor</a>
-        </li>
-        <li>
-          <Link to="/main">main Link</Link>
-        </li>
-      </ul>
-    </>
+    <React.Suspense fallback="loading…">
+      <LazySubPage></LazySubPage>
+    </React.Suspense>
   );
 }

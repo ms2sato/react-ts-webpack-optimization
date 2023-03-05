@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { hydrateRoot } from "react-dom/client";
 import { Routing } from "./common";
 
