@@ -3,9 +3,9 @@ const configFile = path.join(__dirname, `tsconfig.client.json`);
 module.exports = {
   mode: process.env.NODE_ENV == "production" ? "production" : "development",
   entry: {
-    index: "./client/index.tsx",
-    main: "./client/main.tsx",
-    sub: "./client/sub.tsx",
+    index: "./client/index.ts",
+    main: "./client/main.ts",
+    sub: "./client/sub.ts",
   },
   output: {
     path: `${__dirname}/dist/public`,
