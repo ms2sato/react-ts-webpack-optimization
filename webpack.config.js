@@ -27,4 +27,15 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".json"],
   },
   target: ["web", "es6"],
+  optimization: {
+    splitChunks: {
+      chunks: "initial",
+      cacheGroups: {
+        default: {
+          name: "vendors",
+          reuseExistingChunk: true,
+        },
+      },
+    },
+  },
 };

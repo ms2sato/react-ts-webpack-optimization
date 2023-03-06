@@ -6,8 +6,9 @@ export function Layout({ js, url }: { js: string; url: string }) {
   return (
     <html>
       <head>
-        <title>main</title>
+        <title>{`React SSR with Webpack Optimaization: entry from ${js}`}</title>
         <meta charSet="utf-8" />
+        <script src="/vendors.js" defer></script>
         <script src={js} defer></script>
       </head>
       <body>

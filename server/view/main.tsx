@@ -3,5 +3,5 @@ import { Layout } from "./layout";
 import type express from "express";
 
 export function ServerMainPage(req: express.Request): ReactNode {
-  return <Layout js={"main.js"} url={req.url}></Layout>;
+  return <Layout js={"/main.js"} url={req.url}></Layout>;
 }
