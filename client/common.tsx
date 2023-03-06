@@ -2,7 +2,7 @@ import * as React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { hydrateRoot } from "react-dom/client";
 
-import { App } from "../isomorphic/app";
+import { App } from "../isomorphic/App";
 
 function Routing() {
   return (

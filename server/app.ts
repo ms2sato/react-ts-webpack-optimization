@@ -2,9 +2,9 @@ import path from "path";
 import express from "express";
 import http from "http";
 import logger from "morgan";
-import { ServerIndexPage } from "./view/index";
-import { ServerMainPage } from "./view/main";
-import { ServerSubPage } from "./view/sub";
+import { IndexPage } from "./view/IndexPage";
+import { MainPage } from "./view/MainPage";
+import { SubPage } from "./view/SubPage";
 
 import { renderToPipeableStream } from "react-dom/server";
 import { ReactNode } from "react";
@@ -41,15 +41,15 @@ const renderView = (res: express.Response, view: ReactNode) => {
 };
 
 app.get("/", (req, res) => {
-  renderView(res, ServerIndexPage(req));
+  renderView(res, IndexPage(req));
 });
 
 app.get("/main", (req, res) => {
-  renderView(res, ServerMainPage(req));
+  renderView(res, MainPage(req));
 });
 
 app.get("/sub", (req, res) => {
-  renderView(res, ServerSubPage(req));
+  renderView(res, SubPage(req));
 });
 
 const server = http.createServer(app);

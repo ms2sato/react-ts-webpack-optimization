@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticRouter } from "react-router-dom/server";
-import { App } from "../../isomorphic/app";
+import { App } from "../../isomorphic/App";
 
 export function Layout({ js, url }: { js: string; url: string }) {
   return (

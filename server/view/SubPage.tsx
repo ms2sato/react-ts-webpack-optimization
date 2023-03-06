@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
-import { Layout } from "./layout";
+import { Layout } from "./Layout";
 import type express from "express";
 
-export function ServerSubPage(req: express.Request): ReactNode {
+export function SubPage(req: express.Request): ReactNode {
   return <Layout js={"/sub.js"} url={req.url}></Layout>;
 }

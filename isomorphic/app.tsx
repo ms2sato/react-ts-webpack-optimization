@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
 
-const files = ["index-page", "main-page", "sub-page"];
+const files = ["IndexPage", "MainPage", "SubPage"];
 
 const lazyImportPage = (pagePath: string) => {
   return React.lazy(() =>
