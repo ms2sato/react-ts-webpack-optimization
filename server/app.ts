@@ -2,6 +2,7 @@ import path from "path";
 import express from "express";
 import http from "http";
 import logger from "morgan";
+import { ServerIndexPage } from "./view/index";
 import { ServerMainPage } from "./view/main";
 import { ServerSubPage } from "./view/sub";
 
@@ -40,7 +41,7 @@ const renderView = (res: express.Response, view: ReactNode) => {
 };
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  renderView(res, ServerIndexPage(req));
 });
 
 app.get("/main", (req, res) => {

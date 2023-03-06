@@ -7,6 +7,12 @@ export function Page() {
       <h1>This is Main</h1>
       <ul>
         <li>
+          <a href="/">index Anchor</a>
+        </li>
+        <li>
+          <Link to="/">index Link</Link>
+        </li>
+        <li>
           <a href="/sub">sub Anchor</a>
         </li>
         <li>
