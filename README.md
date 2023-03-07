@@ -20,7 +20,7 @@ and access to http://localhost:3000
 
 ## React SSR
 
-- Routes of react-router-dom is shared with server and client, located isomorphic directory
+- Routes of react-router-dom is shared with server and client, located on isomorphic directory
 - renderToPipeableStream is used for response on server
 - hydrateRoot is used for each entry point on client
 
